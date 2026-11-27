@@ -3,12 +3,8 @@
 namespace Indodana;
 
 use Indodana\Utils\Validator\Validator;
-use PHPUnit\Framework\Attributes\PreserveGlobalState;
-use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 use PHPUnit\Framework\TestCase;
 
-#[RunTestsInSeparateProcesses]
-#[PreserveGlobalState(false)]
 final class EmailTest extends TestCase {
     public function testValidEmail() {
         $input = [

@@ -13,11 +13,11 @@
   ],
   "autoload": {
     "psr-4": {
-      "Indodana\\":"src/"
+      "Indodana\\": "src/"
     }
   },
   "scripts": {
-    "sniffer:php8": "phpcs -p ./src --standard=vendor/phpcompatibility/php-compatibility/PHPCompatibility --runtime-set testVersion 8.3-",
+    "sniffer:compat": "phpcs -p ./src --standard=vendor/phpcompatibility/php-compatibility/PHPCompatibility --runtime-set testVersion 8.3-",
     "test": "./vendor/bin/phpunit --configuration phpunit.xml.dist --testdox --no-coverage",
     "test:coverage": "./vendor/bin/phpunit --configuration phpunit.xml.dist --testdox"
   },
@@ -32,11 +32,10 @@
     "phpcompatibility/php-compatibility": "^10.0@alpha"
   },
   "config": {
-    "platform": {
-      "php": "8.3"
-    },
     "allow-plugins": {
       "dealerdirect/phpcodesniffer-composer-installer": true
     }
-  }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
 }
